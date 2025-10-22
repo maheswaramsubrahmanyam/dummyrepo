@@ -1,4 +1,5 @@
-
+## Step 0: Create Data Base name with "VKR_FEST_2025"
+**Important Step** 
 ## **Step 1: Table Creation & Insert Data**
 
 **Table:** `Employees`
@@ -67,7 +68,7 @@ INSERT INTO Employees VALUES
 2. Display `emp_name`, `salary`, and `company` of all employees.
 3. Show employees working in the `IT` department.
 4. Show employees with salary greater than 80,000.
-
+---
 ### Moderate
 
 5. Display employees ordered by `salary` descending.
@@ -76,7 +77,7 @@ INSERT INTO Employees VALUES
 8. Display female employees in the `Finance` department.
 9. Increase salary of all employees in `Tata` by 5,000.
 10. Delete employees with salary less than 65,000.
-
+---
 ### Tough (2 Queries)
 
 11. Display the top 3 highest-paid employees in the `IT` department.

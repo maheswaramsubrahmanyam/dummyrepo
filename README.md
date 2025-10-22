@@ -1,88 +1,85 @@
 
+## **Step 1: Table Creation & Insert Data**
 
+**Table:** `Employees`
 
-## Question 1: Table Creation & Insert Data 
+| Column Name | Data Type   | Constraints                 |
+| ----------- | ----------- | --------------------------- |
+| emp_id      | INT         | PRIMARY KEY                 |
+| emp_name    | VARCHAR(50) | NOT NULL                    |
+| salary      | INT         | CHECK (salary >= 0)         |
+| gender      | CHAR(1)     | CHECK (gender IN ('M','F')) |
+| department  | VARCHAR(50) | NOT NULL                    |
+| company     | VARCHAR(50) | NOT NULL                    |
 
-**Task:** Create a table `Employees` with the following structure and insert 5–6 records.
-
-**Table Structure:**
-
-| Column Name | Data Type   | Constraints                |
-| ----------- | ----------- | -------------------------- |
-| emp_id      | INT         | PRIMARY KEY                |
-| emp_name    | VARCHAR(50) | NOT NULL                   |
-| salary      | INT         | CHECK(salary > 0)          |
-| gender      | CHAR(1)     | CHECK(gender IN ('M','F')) |
-| dept        | VARCHAR(50) | NOT NULL                   |
-| company     | VARCHAR(50) |                            |
-
-**Sample Query:**
+**SQL Query:**
 
 ```sql
 CREATE TABLE Employees (
     emp_id INT PRIMARY KEY,
     emp_name VARCHAR(50) NOT NULL,
-    salary INT CHECK(salary > 0),
-    gender CHAR(1) CHECK(gender IN ('M','F')),
-    dept VARCHAR(50) NOT NULL,
-    company VARCHAR(50)
+    salary INT CHECK (salary >= 0),
+    gender CHAR(1) CHECK (gender IN ('M','F')),
+    department VARCHAR(50) NOT NULL,
+    company VARCHAR(50) NOT NULL
 );
 
 INSERT INTO Employees VALUES
-(1, 'Ravi Kumar', 50000, 'M', 'CSE', 'TechCorp'),
-(2, 'Sita Reddy', 60000, 'F', 'ECE', 'InnovateX'),
-(3, 'Rahul Sharma', 45000, 'M', 'ME', 'BuildIt'),
-(4, 'Anjali Patel', 55000, 'F', 'CSE', 'TechCorp'),
-(5, 'Vikram Singh', 70000, 'M', 'EEE', 'InnovateX'),
-(6, 'Meena Joshi', 65000, 'F', 'ME', 'BuildIt');
+(1, 'Rohit Sharma', 80000, 'M', 'IT', 'Google'),
+(2, 'Sanya Malhotra', 75000, 'F', 'HR', 'Microsoft'),
+(3, 'Anil Kumar', 60000, 'M', 'Finance', 'Zoho'),
+(4, 'Priya Singh', 95000, 'F', 'IT', 'Apple'),
+(5, 'Vikram Das', 70000, 'M', 'Sales', 'Tata'),
+(6, 'Rina Patel', 85000, 'F', 'IT', 'Google'),
+(7, 'Karan Verma', 72000, 'M', 'Finance', 'Microsoft'),
+(8, 'Meera Joshi', 68000, 'F', 'HR', 'Zoho'),
+(9, 'Arjun Rao', 78000, 'M', 'IT', 'Apple'),
+(10, 'Sneha Kapoor', 64000, 'F', 'Sales', 'Tata'),
+(11, 'Rahul Jain', 88000, 'M', 'Finance', 'Google'),
+(12, 'Ananya Roy', 77000, 'F', 'HR', 'Microsoft'),
+(13, 'Manish Sharma', 69000, 'M', 'IT', 'Zoho'),
+(14, 'Pooja Mehta', 81000, 'F', 'Sales', 'Apple'),
+(15, 'Vikas Gupta', 72000, 'M', 'IT', 'Tata'),
+(16, 'Radhika Sen', 73000, 'F', 'Finance', 'Google'),
+(17, 'Suresh Reddy', 76000, 'M', 'HR', 'Microsoft'),
+(18, 'Divya Nair', 80000, 'F', 'IT', 'Zoho'),
+(19, 'Amitabh Das', 85000, 'M', 'Sales', 'Apple'),
+(20, 'Neha Sharma', 70000, 'F', 'IT', 'Tata'),
+(21, 'Siddharth Verma', 95000, 'M', 'Finance', 'Google'),
+(22, 'Isha Khanna', 68000, 'F', 'HR', 'Microsoft'),
+(23, 'Deepak Joshi', 72000, 'M', 'IT', 'Zoho'),
+(24, 'Anjali Kapoor', 80000, 'F', 'Sales', 'Apple'),
+(25, 'Ramesh Kumar', 75000, 'M', 'IT', 'Tata'),
+(26, 'Tanya Singh', 90000, 'F', 'Finance', 'Google'),
+(27, 'Vijay Rao', 77000, 'M', 'HR', 'Microsoft'),
+(28, 'Rekha Sharma', 68000, 'F', 'IT', 'Zoho'),
+(29, 'Kunal Mehta', 85000, 'M', 'Sales', 'Apple'),
+(30, 'Simran Patel', 72000, 'F', 'IT', 'Tata');
 ```
 
 ---
 
-## **Easy Queries**
+## Step 2: Questions
 
-1. Display all employees.
-2. Display `emp_name` and `salary` only.
-3. Display all employees in the `CSE` department.
-4. Display all female employees.
+### Easy
 
----
+1. Display all employee details.
+2. Display `emp_name`, `salary`, and `company` of all employees.
+3. Show employees working in the `IT` department.
+4. Show employees with salary greater than 80,000.
 
-## **Moderate Queries**
+### Moderate
 
-1. Display employees with salary greater than 55000.
-2. Display employees in ascending order of salary.
-3. Display employees in `TechCorp` whose salary is less than 60000.
-4. Update salary of `emp_id = 3` to 48000.
-5. Delete employee with `emp_id = 5`.
+5. Display employees ordered by `salary` descending.
+6. Count the number of employees in each `company`.
+7. Find the average salary in each `department`.
+8. Display female employees in the `Finance` department.
+9. Increase salary of all employees in `Tata` by 5,000.
+10. Delete employees with salary less than 65,000.
 
----
+### Tough (2 Queries)
 
-## **Aggregate & Grouping Queries (Moderate)**
-
-1. Find the average salary of all employees.
-2. Find the maximum and minimum salary.
-3. Count employees in each department.
-4. Display the total salary paid by each company.
+11. Display the top 3 highest-paid employees in the `IT` department.
+12. Find companies where the **average salary of male employees is greater than 75,000**.
 
 ---
-
-## **Tough Query**
-
-**Scenario:** Find employees whose salary is **above the average salary of their department**, and display their `emp_name`, `salary`, `dept`, and `company`.
-
-**Query Example:**
-
-```sql
-SELECT emp_name, salary, dept, company
-FROM Employees e
-WHERE salary > (
-    SELECT AVG(salary)
-    FROM Employees
-    WHERE dept = e.dept
-);
-```
-
----
-
-

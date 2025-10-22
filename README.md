@@ -1,7 +1,7 @@
 
 
 
-## **Question 1: Table Creation & Insert Data **
+## Question 1: Table Creation & Insert Data 
 
 **Task:** Create a table `Employees` with the following structure and insert 5–6 records.
 

@@ -1,4 +1,4 @@
-## Step 0: Create Data Base name with "VKR_FEST_2025"
+## Step 0: Create Data Base name with "VKR_FEST_2025_CRACK_THE_QUERRY"
 **Important Step** 
 ## **Step 1: Table Creation & Insert Data**
 
